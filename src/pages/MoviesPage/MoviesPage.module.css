@@ -1,0 +1,14 @@
+.input {
+    height: 30px;
+    width: 300px;
+    padding: 10px;
+}
+
+.btn {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.list {
+    margin: 20px 20px;
+}

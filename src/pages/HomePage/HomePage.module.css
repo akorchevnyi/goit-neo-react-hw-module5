@@ -1,0 +1,7 @@
+.movieList {
+    padding: 0 0 5px 30px
+}
+
+.movieItem:hover {
+    color: orange;
+}
