@@ -1,7 +1,6 @@
 import useMovies from "../../hooks/useMovies.jsx";
 import { Loader } from "../../components/Loader/Loader.jsx";
-import css from "./HomePage.module.css";
-import { Link } from "react-router-dom";
+import MovieList from "../../components/MovieList/MovieList.jsx";
 
 export default function HomePage() {
     const { isLoading, error, data } = useMovies();
@@ -12,19 +11,8 @@ export default function HomePage() {
 
     return (
         <div className="container">
-
             <h2>⭐ Trending today</h2>
-
-            <ul className={css.movieList}>
-                {data.map(({ id, title }) => {
-                        return (
-                            <li key={id}>
-                                <Link to={`/movies/${id}`} className={css.movieItem}>🎥 {title}</Link>
-                            </li>
-                        );
-                    }
-                )}
-            </ul>
+            <MovieList data={data}/>
         </div>
     );
 };
